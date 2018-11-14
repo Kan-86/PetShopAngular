@@ -1,0 +1,18 @@
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Pet Details</div>
+  <div class="card-body">
+    <div *ngIf="pet">
+      <li class="list-group-item list-group-item-dark">Id: {{pet.id}}</li>
+      <li class="list-group-item list-group-item-dark">Name: {{pet.petName}}</li>
+      <li class="list-group-item list-group-item-dark">Type: {{pet.petType}}</li>
+      <li class="list-group-item list-group-item-dark">Colour: {{pet.colour}}</li>
+      <li class="list-group-item list-group-item-dark">Details: {{pet.details}}</li>
+      <li class="list-group-item list-group-item-dark">Price: {{pet.price}}</li>
+    </div>
+  </div>
+  <div *ngIf="!pet">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </div>
+  <button class="btn-dark btn-lg" routerLink="/pets">Back</button>
+</div>
+

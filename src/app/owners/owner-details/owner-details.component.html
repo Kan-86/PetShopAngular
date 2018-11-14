@@ -1,0 +1,20 @@
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Owner Details</div>
+    <div class="card-body">
+      <div *ngIf="owner">
+        <li class="list-group-item list-group-item-dark">Id: {{owner.id}}</li>
+        <li class="list-group-item list-group-item-dark">Name: {{owner.firstName}}</li>
+        <li class="list-group-item list-group-item-dark">Surname: {{owner.lastName}}</li>
+        <li class="list-group-item list-group-item-dark">Address: {{owner.address}}</li>
+        <li class="list-group-item list-group-item-dark">Phonenumber: {{owner.phoneNumber}}</li>
+        <li class="list-group-item list-group-item-dark">Email: {{owner.email}}</li>
+      </div>
+    </div>
+  <button class="btn-dark btn-lg" routerLink="/owners">Back</button>
+  <div *ngIf="!owner">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+</div>
+
+
+
+
