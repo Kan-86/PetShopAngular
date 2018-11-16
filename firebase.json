@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/PetShopAngular",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
