@@ -9,7 +9,7 @@ import {Owner} from "../models/owner";
 export class OwnerService
 {
 
-  apiUrl = 'https://petshopapp2018.azurewebsites.net/api/owners';
+  apiUrl = 'https://petshopappusernov.azurewebsites.net/api/owners';
 
   constructor(private http: HttpClient)
   {

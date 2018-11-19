@@ -14,11 +14,9 @@ import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./_guards/auth.guard";
 
 const routes: Routes = [
-  //{ path: '', component: HomeComponent, canActivate: [AuthGuard] },
+
   { path: 'UserToken', component: LoginComponent },
   { path: '', component: WelcomeComponent, canActivate: [AuthGuard] },
-  // otherwise redirect to home
-  //{ path: '**', redirectTo: '' },
   { path: 'pets/:id', component: PetDetailsComponent },
   { path: 'owners/:id', component: OwnerDetailsComponent },
   { path: 'owners', component: OwnerListComponent },
@@ -26,7 +24,8 @@ const routes: Routes = [
   { path: 'owner-update/:id', component: OwnerUpdateComponent },
   { path: 'pets', component: PetsListComponent },
   { path: 'pet-add', component: PetAddComponent },
-  { path: 'pet-update/:id', component: PetUpdateComponent }
+  { path: 'pet-update/:id', component: PetUpdateComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 export class PetService
 {
 
-  apiUrl = 'https://petshopapp2018.azurewebsites.net/api/pets';
+  apiUrl = 'https://petshopappusernov.azurewebsites.net/api/pets';
 
   constructor(private http: HttpClient)
   {
