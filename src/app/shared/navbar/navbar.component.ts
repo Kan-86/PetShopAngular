@@ -18,15 +18,5 @@ export class NavbarComponent implements OnInit {
     this.username = authService.getUsername();
   }
 
-  ngOnInit() {
-    // get users from secure api end point
-    this.todoItemService.getItems()
-      .subscribe(
-        items => {
-          this.todoitems = items;
-        },
-        error => {
-          this.errormessage = error.message;
-        });
-  }
+  ngOnInit() {}
 }

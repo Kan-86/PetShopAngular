@@ -14,17 +14,16 @@ import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./_guards/auth.guard";
 
 const routes: Routes = [
-
   { path: 'UserToken', component: LoginComponent },
   { path: '', component: WelcomeComponent, canActivate: [AuthGuard] },
-  { path: 'pets/:id', component: PetDetailsComponent },
-  { path: 'owners/:id', component: OwnerDetailsComponent },
-  { path: 'owners', component: OwnerListComponent },
-  { path: 'owner-add', component: OwnerAddComponent },
-  { path: 'owner-update/:id', component: OwnerUpdateComponent },
-  { path: 'pets', component: PetsListComponent },
-  { path: 'pet-add', component: PetAddComponent },
-  { path: 'pet-update/:id', component: PetUpdateComponent },
+  { path: 'pets/:id', component: PetDetailsComponent , canActivate: [AuthGuard]},
+  { path: 'owners/:id', component: OwnerDetailsComponent , canActivate: [AuthGuard]},
+  { path: 'owners', component: OwnerListComponent, canActivate: [AuthGuard]},
+  { path: 'owner-add', component: OwnerAddComponent , canActivate: [AuthGuard]},
+  { path: 'owner-update/:id', component: OwnerUpdateComponent , canActivate: [AuthGuard]},
+  { path: 'pets', component: PetsListComponent , canActivate: [AuthGuard]},
+  { path: 'pet-add', component: PetAddComponent , canActivate: [AuthGuard]},
+  { path: 'pet-update/:id', component: PetUpdateComponent , canActivate: [AuthGuard]},
   { path: '**', redirectTo: '' },
 ];
 

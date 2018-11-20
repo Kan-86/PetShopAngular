@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         success => {
           this.router.navigate(['/']);
+          window.location.reload();
         },
         error => {
           this.errormessage = error.message;

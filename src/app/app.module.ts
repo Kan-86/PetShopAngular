@@ -22,6 +22,7 @@ import {AlertModule, ButtonsModule, PaginationModule} from "ngx-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule, MatIconModule, MatProgressSpinnerModule} from "@angular/material";
 import {MzDropdownModule, MzModalModule, MzNavbarModule} from "ngx-materialize";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import {MzDropdownModule, MzModalModule, MzNavbarModule} from "ngx-materialize";
     MatButtonModule,
     MatProgressSpinnerModule,
     MatIconModule,
+    FlexLayoutModule,
   ],
   providers: [
     AuthGuard,
