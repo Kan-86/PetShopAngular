@@ -1,33 +1,32 @@
 <form [formGroup]="petForm" (ngSubmit)="save()">
   <div class="container">
     <div class="row">
-      <div class="col-2 pl-4 mt-3">
-        <label>
-          Name:
-          <input class="form-control" type="text" formControlName="petName">
-        </label>
+      <div class="col-3 pl-4 mt-3" style="background-color: white;padding: 18px 0 18px 0;
+    border: 1px solid white;
+    border-radius: 20px;">
 
-        <label>
-          Type:
-          <input class="form-control" type="text" formControlName="petType">
-        </label>
+        <mat-form-field>
+          <input matInput placeholder="Pet name" formControlName="petName">
+        </mat-form-field>
 
-        <label>
-          Colour:
-          <input class="form-control" type="text" formControlName="colour">
-        </label>
+        <mat-form-field>
+          <input matInput placeholder="Pet type" formControlName="petType">
+        </mat-form-field>
 
-        <label>
-        Details:
-        <input class="form-control" type="text" formControlName="details">
-        </label>
+        <mat-form-field>
+          <input matInput placeholder="Colour" formControlName="colour">
+        </mat-form-field>
 
-        <label>
-          Price:
-          <input class="form-control" type="text" formControlName="price">
-        </label>
-        <button class="btn-sucess btn-sm" type="submit">Save</button>
-        <button class="btn-dark btn-sm" routerLink="/pets">Back</button>
+        <mat-form-field>
+          <input matInput placeholder="Details" formControlName="details">
+        </mat-form-field>
+
+          <mat-form-field style="display: block">
+            <input color="primary" matInput placeholder="Price" formControlName="price">
+          </mat-form-field>
+
+        <button class="btn-primary btn-sm" type="submit" style="margin-right: 15px">Save</button>
+        <button class="btn-danger btn-sm" routerLink="/pets">Back</button>
       </div>
     </div>
   </div>

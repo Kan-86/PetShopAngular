@@ -1,23 +1,26 @@
-<div class="container">
-  <button routerLink="/pet-add" class="btn btn-dark ml-1 mt-1 mb-1 btn-lg">Add Pet</button>
+<div class="container"
+     fxLayout="column"
+     fxFill
+     fxLayoutGap="30px">
   <div class="row">
-    <div class="row" *ngIf="pets">
-      <div class="col-6 pl-1 mt-1" *ngFor="let pet of pets">
+    <button routerLink="/pet-add" mat-mini-fab mat-raised-button color="link">+</button>
+  </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start start" *ngIf="pets">
+      <div fxFlex="33" [fxFlex.md]="'50'" [fxFlex.sm]="'100'" *ngFor="let pet of pets">
         <div class="card">
           <div class="card-body">
-          <a routerLink="/pets/{{pet.id}}">
-            {{pet.petName}}</a>
-            <div class="card-body text-right"></div>
-            <button routerLink="/pet-update/{{pet.id}}" class="btn btn-dark btn-sm mr-1 ml-2">Update</button>
-            <button (click)="delete(pet.id)" class="btn btn-dark btn-sm mr-1 ml-2">Delete</button>
+            <a routerLink="/pets/{{pet.id}}">{{pet.petName}}</a>
+            <div class="card-body text-center">
+              <button routerLink="/pet-update/{{pet.id}}" class="btn btn-dark btn-sm mr-1 ml-2">Update</button>
+              <button (click)="delete(pet.id)" class="btn btn-dark btn-sm mr-1 ml-2">Delete</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-      <div *ngIf="!pets">
+      <div *ngIf="!pets" fxFill fxLayoutAlign="center center">
         <mat-spinner mode="indeterminate"></mat-spinner>
       </div>
-  </div>
 </div>
 
 
