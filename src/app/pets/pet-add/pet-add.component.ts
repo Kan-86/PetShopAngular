@@ -24,7 +24,6 @@ export class PetAddComponent implements OnInit {
   }
   save()
   {
-    // data static for now, later we add forms!! ;D
     const pet = this.petForm.value;
     this.petService.addPet(pet)
       .subscribe(() => {

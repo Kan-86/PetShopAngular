@@ -1,34 +1,37 @@
-<form [formGroup]="petForm" (ngSubmit)="save()">
-  <div class="container">
-    <div class="row">
-      <div class="col-3 pl-4 mt-3" style="background-color: white;padding: 18px 0 18px 0;
-    border: 1px solid white;
-    border-radius: 20px;">
+<div fxLayout="column"
+     fxFill
+     fxLayoutGap="10px">
+  <div fxLayout="row">
+    <button routerLink="/pets" mat-mini-fab mat-raised-button color="primary"><<</button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center top">
+    <mat-card fxFlex="33">
+      <form [formGroup]="petForm" (ngSubmit)="save()">
+        <div fxLayout="column">
 
-        <mat-form-field>
-          <input matInput placeholder="Pet name" formControlName="petName">
-        </mat-form-field>
-
-        <mat-form-field>
-          <input matInput placeholder="Pet type" formControlName="petType">
-        </mat-form-field>
-
-        <mat-form-field>
-          <input matInput placeholder="Colour" formControlName="colour">
-        </mat-form-field>
-
-        <mat-form-field>
-          <input matInput placeholder="Details" formControlName="details">
-        </mat-form-field>
-
-          <mat-form-field style="display: block">
-            <input color="primary" matInput placeholder="Price" formControlName="price">
+          <mat-form-field>
+            <input matInput placeholder="Pet name" formControlName="petName">
           </mat-form-field>
 
+          <mat-form-field>
+            <input matInput placeholder="Pet type" formControlName="petType">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Colour" formControlName="colour">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Details" formControlName="details">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input color="primary" matInput placeholder="Price" formControlName="price">
+          </mat-form-field>
+        </div>
         <button class="btn-primary btn-sm" type="submit" style="margin-right: 15px">Save</button>
         <button class="btn-danger btn-sm" routerLink="/pets">Back</button>
-      </div>
-    </div>
+      </form>
+    </mat-card>
   </div>
-</form>
-
+</div>

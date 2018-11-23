@@ -1,35 +1,38 @@
-<form [formGroup]="petForm" (ngSubmit)="save()">
-  <div class="container">
-    <div class="row">
-      <div class="col-2 pl-4 mt-3">
-        <label>
-          Name:
-          <input class="form-control" type="text" formControlName="petName">
-        </label>
-
-        <label>
-          Type:
-          <input class="form-control" type="text" formControlName="petType">
-        </label>
-
-        <label>
-          Colour:
-          <input class="form-control" type="text" formControlName="colour">
-        </label>
-
-        <label>
-          Details:
-          <input class="form-control" type="text" formControlName="details">
-        </label>
-
-        <label>
-          Price:
-          <input class="form-control" type="text" formControlName="price">
-        </label>
-        <button class="btn-light" type="submit">Save</button>
-        <button class="btn-dark" routerLink="/pets">Back</button>
-      </div>
-    </div>
+<div fxLayout="column"
+     fxFill
+     fxLayoutGap="10px">
+  <div fxLayout="row">
+    <button routerLink="/pets" mat-mini-fab mat-raised-button color="primary"><<</button>
   </div>
-</form>
+  <div fxLayout="row" fxLayoutAlign="center top">
+    <mat-card fxFlex="33">
+        <form [formGroup]="petForm" (ngSubmit)="save()">
+          <div fxLayout="column">
+
+            <mat-form-field>
+              <input class="form-control" matInput placeholder="Pet name" formControlName="petName">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input class="form-control" matInput placeholder="Pet type" formControlName="petType">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input class="form-control" matInput placeholder="Colour" formControlName="colour">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input class="form-control" matInput placeholder="Details" formControlName="details">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input class="form-control" color="primary" matInput placeholder="Price" formControlName="price">
+            </mat-form-field>
+          </div>
+            <button class="btn-light" type="submit">Save</button>
+            <button class="btn-dark" routerLink="/pets">Back</button>
+          </form>
+    </mat-card>
+  </div>
+</div>
 

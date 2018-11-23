@@ -20,7 +20,13 @@ import {AuthenticationService} from "./shared/services/authentication.service";
 import {TodoItemService} from "./shared/services/todo-item.service";
 import {AlertModule, ButtonsModule, PaginationModule} from "ngx-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatIconModule, MatInputModule, MatProgressSpinnerModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatInputModule,
+  MatProgressSpinnerModule
+} from "@angular/material";
 import {MzDropdownModule, MzModalModule, MzNavbarModule} from "ngx-materialize";
 import {FlexLayoutModule} from "@angular/flex-layout";
 
@@ -52,6 +58,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatIconModule,
     FlexLayoutModule,
     MatInputModule,
+    MatCardModule,
   ],
   providers: [
     AuthGuard,

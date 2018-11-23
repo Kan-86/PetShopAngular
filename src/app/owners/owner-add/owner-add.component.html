@@ -1,35 +1,38 @@
-<form [formGroup]="ownerForm" (ngSubmit)="save()">
-  <div class="container">
-    <div class="row">
-      <div class="col-2 pl-4 mt-3">
-        <label>
-        First name:
-        <input class="form-control" type="text" formControlName="firstName">
-      </label>
+<div fxLayout="column"
+     fxFill
+     fxLayoutGap="10px">
+  <div fxLayout="row">
+    <button routerLink="/pets" mat-mini-fab mat-raised-button color="primary"><<</button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center top">
+    <mat-card fxFlex="33">
+      <form [formGroup]="ownerForm" (ngSubmit)="save()">
+        <div fxLayout="column">
+          <mat-form-field>
+            <input matInput placeholder="First name" formControlName="firstName">
+          </mat-form-field>
 
-        <label>
-          Last name:
-          <input class="form-control" type="text" formControlName="lastName">
-        </label>
+          <mat-form-field>
+            <input matInput placeholder="Last name" formControlName="lastName">
+          </mat-form-field>
 
-        <label>
-          Address:
-          <input class="form-control" type="text" formControlName="address">
-        </label>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="address">
+          </mat-form-field>
 
-        <label>
-          Phonenumber:
-          <input class="form-control" type="number" formControlName="phoneNumber">
-        </label>
+          <mat-form-field>
+            <input matInput placeholder="Phonenumber" formControlName="phoneNumber">
+          </mat-form-field>
 
-        <label>
-          Email:
-          <input class="form-control" type="text" formControlName="email">
-        </label>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+        </div>
         <button class="btn-sucess btn-sm" type="submit">Save</button>
         <button class="btn-dark btn-sm" routerLink="/owners">Back</button>
-      </div>
-    </div>
+      </form>
+    </mat-card>
   </div>
-</form>
+</div>
+
 
